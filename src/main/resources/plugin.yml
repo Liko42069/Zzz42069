@@ -1,0 +1,4 @@
+name: Zzz
+version: '${project.version}'
+main: cringez.zzz.Zzz
+api-version: 1.16
