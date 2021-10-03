@@ -27,9 +27,9 @@ public class crenge implements Listener {
     public void onJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer();
         Component[] messages = new Component[]{
-                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.YELLOW), Component.text( " RageJoined ", NamedTextColor.YELLOW)),
+                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.YELLOW), Component.text( " ragejoined ", NamedTextColor.YELLOW)),
                 TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.YELLOW), Component.text( " Joined to ruin our runs! ", NamedTextColor.YELLOW)),
-                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.YELLOW), Component.text( " Joined, get Iplogged lmfao ", NamedTextColor.YELLOW))
+                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.YELLOW), Component.text( " Joined, get IP-logged lmfao ", NamedTextColor.YELLOW))
 
     };
         int luckyNumber = rand.nextInt(messages.length);
@@ -43,11 +43,11 @@ public class crenge implements Listener {
     public void onQuit(PlayerQuitEvent e) {
         Player player = e.getPlayer();
         Component[] deezNutz = new Component[]{
-                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.AQUA), Component.text(" Ragequit! ", NamedTextColor.AQUA)),
-                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.AQUA), Component.text(" Thank fuck. ", NamedTextColor.AQUA)),
-                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.AQUA), Component.text(" Left. They were slow zz low IQ anyway.", NamedTextColor.AQUA)),
+                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.AQUA), Component.text(" ragequit! ", NamedTextColor.AQUA)),
+                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.AQUA), Component.text(" left. Thank fuck. ", NamedTextColor.AQUA)),
+                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.AQUA), Component.text(" left. They were slow zz low IQ anyway.", NamedTextColor.AQUA)),
                 TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.AQUA), Component.text(" Finally left", NamedTextColor.AQUA)),
-                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.AQUA), Component.text(" Left. Good riddance!", NamedTextColor.AQUA)),
+                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.AQUA), Component.text(" left. Good riddance!", NamedTextColor.AQUA)),
         };
         Random zzzGarbo = new Random();
         int luckyLoser = zzzGarbo.nextInt(deezNutz.length);
