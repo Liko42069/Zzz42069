@@ -1,23 +1,15 @@
 package cringez.zzz;
 
 import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.ComponentLike;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.TextComponent;
-import net.kyori.adventure.text.format.TextColor;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import org.checkerframework.checker.nullness.qual.NonNull;
-
-
-import java.awt.*;
 import java.util.Random;
-import java.util.Set;
+
 
 public class crenge implements Listener {
     Random rand = new Random();
@@ -35,7 +27,6 @@ public class crenge implements Listener {
         Component luckyMessage = messages[luckyNumber];
         e.joinMessage(luckyMessage);
     }
-
     @EventHandler
     public void onQuit(PlayerQuitEvent e) {
         Player player = e.getPlayer();
@@ -52,13 +43,3 @@ public class crenge implements Listener {
         e.quitMessage(zzzNoob);
     }
     }
-
-
-
-
-
-
-
-
-
-
