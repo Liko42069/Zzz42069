@@ -12,7 +12,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 
 import java.awt.*;
@@ -27,16 +27,13 @@ public class crenge implements Listener {
     public void onJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer();
         Component[] messages = new Component[]{
-                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.YELLOW), Component.text( " ragejoined ", NamedTextColor.YELLOW)),
-                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.YELLOW), Component.text( " Joined to ruin our runs! ", NamedTextColor.YELLOW)),
-                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.YELLOW), Component.text( " Joined, get IP-logged lmfao ", NamedTextColor.YELLOW))
-
-    };
+                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.YELLOW), Component.text(" ragejoined ", NamedTextColor.YELLOW)),
+                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.YELLOW), Component.text(" Joined to ruin our runs! ", NamedTextColor.YELLOW)),
+                TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.YELLOW), Component.text(" Joined, get IP-logged lmfao ", NamedTextColor.YELLOW)),
+        };
         int luckyNumber = rand.nextInt(messages.length);
         Component luckyMessage = messages[luckyNumber];
         e.joinMessage(luckyMessage);
-
-
     }
 
     @EventHandler
@@ -49,13 +46,11 @@ public class crenge implements Listener {
                 TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.AQUA), Component.text(" Finally left", NamedTextColor.AQUA)),
                 TextComponent.ofChildren(player.displayName().colorIfAbsent(NamedTextColor.AQUA), Component.text(" left. Good riddance!", NamedTextColor.AQUA)),
         };
-        Random zzzGarbo = new Random();
-        int luckyLoser = zzzGarbo.nextInt(deezNutz.length);
+        Random rand = new Random();
+        int luckyLoser = rand.nextInt(deezNutz.length);
         Component zzzNoob = deezNutz[luckyLoser];
         e.quitMessage(zzzNoob);
-
-
-        }
+    }
     }
 
 
